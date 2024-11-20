@@ -1,20 +1,14 @@
-
 const mongoose = require('mongoose');
+
 const exerciseSchema = new mongoose.Schema({
     username: String,
     description: String,
     duration: Number,
-    date: String,
+    date: Date,
 });
   
 const userSchema = new mongoose.Schema({
     username: String
 });
-  
-const logSchema = new mongoose.Schema({
-    username: String,
-    count: Number,
-    log: []
-});
 
-module.exports = { exerciseSchema, userSchema, logSchema };
+module.exports = { exerciseSchema, userSchema };
